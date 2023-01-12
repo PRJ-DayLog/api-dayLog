@@ -1,6 +1,7 @@
 package com.api.daylog.entity;
 
 import com.api.daylog.common.entity.BaseDateWithDeletedEntity;
+import com.api.daylog.common.enums.UserRole;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -25,5 +26,9 @@ public class User extends BaseDateWithDeletedEntity {
 
     @Column(name = "phone_number")
     private String phoneNumber;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "user_role")
+    private UserRole userRole;
 
 }
