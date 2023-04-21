@@ -3,8 +3,8 @@ package com.api.daylog.domain.user.dto.request;
 import lombok.*;
 import org.hibernate.validator.constraints.Length;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Pattern;
 
 @Getter
 @Setter
@@ -13,9 +13,9 @@ import javax.validation.constraints.Pattern;
 @AllArgsConstructor
 public class UserCreateRequest {
 
+    @Email
     @NotEmpty
-    @Pattern(regexp = "\\d{3}-\\d{4}-\\d{4}")
-    private String phoneNumber;
+    private String email;
 
     @NotEmpty
     private String name;

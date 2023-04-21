@@ -24,7 +24,7 @@ class UserServiceTest extends UnitTestHelper {
         // given
         UserCreateRequest userCreateRequest = UserCreateRequest.builder()
                 .name("범수")
-                .phoneNumber("010-1234-1234")
+                .email("qhrud0527@naver.com")
                 .password("12341234")
                 .build();
 

@@ -30,8 +30,8 @@ public class User extends BaseDateWithDeletedEntity {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "phone_number", nullable = false)
-    private String phoneNumber;
+    @Column(name = "email", nullable = false)
+    private String email;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "user_role", nullable = false)
@@ -40,7 +40,7 @@ public class User extends BaseDateWithDeletedEntity {
     public static User from(UserCreateRequest userCreateRequest) {
         User createUser = new User();
         createUser.name = userCreateRequest.getName();
-        createUser.phoneNumber = userCreateRequest.getPhoneNumber();
+        createUser.email = userCreateRequest.getEmail();
         createUser.password = userCreateRequest.getPassword();
         createUser.userRole = UserRole.USER;
         return createUser;

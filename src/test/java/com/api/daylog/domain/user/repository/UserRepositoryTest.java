@@ -19,14 +19,14 @@ class UserRepositoryTest extends RepositoryTestHelper {
         // given
         UserCreateRequest userCreateRequest = UserCreateRequest.builder()
                 .name("범수")
-                .phoneNumber("010-1234-1234")
+                .email("qhrud0527@naver.com")
                 .password("12341234")
                 .build();
         // when
         User createUser = userRepository.save(User.from(userCreateRequest));
         // then
         assertThat(createUser.getName()).isEqualTo("범수");
-        assertThat(createUser.getPhoneNumber()).isEqualTo("010-1234-1234");
+        assertThat(createUser.getEmail()).isEqualTo("qhrud0527@naver.com");
         assertThat(createUser.getPassword()).isEqualTo("12341234");
         assertThat(createUser.getUserRole()).isEqualTo(UserRole.USER);
     }
