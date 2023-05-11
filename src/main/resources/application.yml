@@ -4,14 +4,14 @@ spring:
   profiles:
     active: local
   datasource:
-    url: jdbc:mysql://ec2-15-164-165-5.ap-northeast-2.compute.amazonaws.com:3306/daylog?serverTimezone=UTC&characterEncoding=UTF-8
+    url: jdbc:mysql://localhost:3306/daylog?serverTimezone=UTC&characterEncoding=UTF-8
     username: "daylog"
     password: "daylog1!@#"
     driver-class-name: com.mysql.cj.jdbc.Driver
 
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: update
     properties:
       hibernate:
         format_sql: true
